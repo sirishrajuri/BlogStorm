@@ -1,0 +1,17 @@
+<div class="container"> 
+    <app-sidebar class="sidebar"></app-sidebar>
+    <div *ngIf="loading" class="loading">Loading...</div>
+    <div *ngIf="errorMessage" class="errorMessage">{{errorMessage}}</div>
+    <div class="wrapper" *ngIf="!loading && !errorMessage">
+        <h1 class="title">Choose your Mode</h1>
+        <h2 class="title_small">Modes are a way to how you create your blog posts. Here are the tools to help you create</h2>
+        <div class="recommend__wrapper">
+            <div class="mode-card" *ngFor="let mode of modes">
+                <div class="mode-icon">{{ mode.icon }}</div>
+                <h2 class="mode-name">{{ mode.title }}</h2>
+                <p class="mode-description">{{ mode.description }}</p>
+                <button class="mode-action" (click)="useMode(mode)">{{ mode.buttonText }}</button>
+            </div>
+        </div>
+    </div>
+</div>

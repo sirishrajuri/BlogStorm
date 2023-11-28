@@ -1,0 +1,89 @@
+<div class="article-settings-container">
+    <h2>Set your article settings</h2>
+    <p>Choose from the options below. You can set defaults for these options anytime from the settings page.</p>
+    
+    <div class="settings-options">
+        <!-- Audience -->
+        <div class="option-group">
+            <label for="audience">Audience</label>
+            <div class="select-container">
+                <select id="audience" [(ngModel)]="settings.audience">
+                    <option *ngFor="let option of audienceOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+
+        <!-- Category -->
+        <div class="option-group">
+            <label for="category">Category</label>
+            <div class="select-container">
+                <select id="category" [(ngModel)]="settings.category">
+                    <option *ngFor="let option of categoryOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+
+        <!-- Language -->
+        <div class="option-group">
+            <label for="language">Language</label>
+            <div class="select-container">
+                <select id="language" [(ngModel)]="settings.language">
+                    <option *ngFor="let option of languageOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+
+        <!-- Author -->
+        <div class="option-group">
+            <label for="author">Author</label>
+            <div class="select-container">
+                <select id="author" [(ngModel)]="settings.author">
+                    <option *ngFor="let option of authorOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+
+        <!-- Image Type -->
+        <div class="option-group">
+            <label for="imageType">Image Type</label>
+            <div class="select-container">
+                <select id="imageType" [(ngModel)]="settings.imageType">
+                    <option *ngFor="let option of imageTypeOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+
+        <!-- Post Status -->
+        <div class="option-group">
+            <label for="postStatus">Post Status</label>
+            <div class="select-container">
+                <select id="postStatus" [(ngModel)]="settings.postStatus">
+                    <option *ngFor="let option of postStatusOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+
+        <!-- Writing Style -->
+        <div class="option-group">
+            <label for="writingStyle">Writing Style</label>
+            <div class="select-container">
+                <select id="writingStyle" [(ngModel)]="settings.writingStyle">
+                    <option *ngFor="let option of writingStyleOptions" [ngValue]="option">{{ option }}</option>
+                </select>
+                <span class="dropdown-icon">&#9662;</span>
+            </div>
+        </div>
+        
+    </div>
+<!-- 
+    <div class="settings-actions">
+        <button class="back-button" (click)="goBack()">Back</button>
+        <button class="save-button" (click)="saveSettings()">Save Settings</button>
+    </div> -->
+</div>

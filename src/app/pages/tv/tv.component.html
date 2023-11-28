@@ -1,0 +1,33 @@
+   
+    <div class="container"> 
+        <app-sidebar class="sidebar"></app-sidebar>
+        <div *ngIf="loading" class="loading">Loading...</div>
+        <div *ngIf="errorMessage" class="errorMessage">{{errorMessage}}</div>
+        <div class="wrapper" *ngIf="!loading && !errorMessage">
+            <h1 class="title">Blog History: </h1>
+            <div class="recommend__wrapper">
+                <div class="tasks-container">
+                    <div *ngFor="let task of tasks" class="task">
+                      <span class="status-indicator" [ngClass]="task.status.toLowerCase()"></span>
+                      <span class="question">{{ task.question }}</span>
+                      <span class="user_id">{{ task.user_id }}</span>
+                      <span class="status">{{ task.status }}</span>
+                      <span class="created-at">{{ task.createdAt }}</span>
+                      <span class="uniqueness">{{ task.timeTaken }}</span>
+                      <span class="word-count">{{ task.wordCount }}</span>
+                      <span class="model-used">{{ task.modelUsed }}</span>
+                      <button class="view-button" (click)="openBlog(task)">View</button>
+                      <!-- <button class="view-button" >Push to WP</button> -->
+                    </div>
+
+                </div>
+             </div>
+             <div class="modal" [ngClass]="{'active': showModal}">
+              <div class="modal-content">
+                  <button class="close-btn" (click)="closeModal()">&times;</button>
+                  <pre>{{selectedBlogContent}}</pre> 
+              </div>
+          </div>
+        </div>
+    </div>
+

@@ -1,0 +1,26 @@
+<div class="wrapper"   >
+    <img *ngIf="regularFilm.thumbnail" class="main__img" [src]="'/assets'+regularFilm.thumbnail.regular.small" alt="small">
+    <div  class="bookmark__icon" (click)="updateFilmsList()">
+        <img *ngIf="!regularFilm.isBookmarked" src="/assets/icon-bookmark-empty.svg" alt="bookmark">
+        <img *ngIf="regularFilm.isBookmarked" src="/assets/icon-bookmark-full.svg" alt="bookmark">
+    </div>
+    <div class="info">
+        <div class="film__wrapper">
+            <div class="film__info">
+                <div class="year">{{regularFilm.year}}</div>
+                <div class="category__wrapper">
+                    <img src="/assets/icon-nav-movies.svg" alt="icon">
+                    <div class="category">
+                        {{regularFilm.category}}
+                    </div>
+                
+                </div>
+                <div class="pg">{{regularFilm.rating}}</div>
+            </div>
+            <div class="name">
+                {{regularFilm.title}}
+            </div>
+        </div>
+    </div>
+   
+</div>

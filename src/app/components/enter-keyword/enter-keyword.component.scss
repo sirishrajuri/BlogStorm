@@ -1,0 +1,180 @@
+.enter-keyword-container {
+    display: flex;
+    height: 100%;
+
+    .left-half, .right-half {
+        flex: 0 0 50%; // flex-grow, flex-shrink, flex-basis
+        padding: 20px;
+        h2{
+            color: white;
+            margin: 0.5cm;
+        }
+        p{
+            color: white;
+            margin: 0.5cm;
+        }
+    }
+
+    .button-group {
+      margin: 20px 0;
+  
+      button {
+        margin-right: 10px;
+        padding: 10px 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: purple;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:disabled {
+          background-color: #ccc;
+          cursor: default;
+        }
+
+        &:not(:disabled):hover {
+          background-color: #a64ca6; // A darker purple for hover effect
+        }
+      }
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: purple;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:disabled {
+          background-color: #ccc;
+          cursor: default;
+        }
+
+        &:not(:disabled):hover {
+          background-color: #a64ca6; // A darker purple for hover effect
+        }
+      }
+
+    
+  
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      // Add other styles for input
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+
+    .suggested-topics {
+      margin-top: 10px;
+      background: #10141E;
+      padding: 10px;
+      border-radius: 5px;
+      color: #ffffff;
+      div {
+        padding: 5px 10px;
+        margin: 5px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+
+
+    .related-keywords-full {
+        background-color: #333; 
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+    
+        h2 {
+          margin-bottom: 16px;
+        }
+    
+        .keywords-list {
+          flex-grow: 1; 
+          overflow-y: auto; 
+        }
+    
+        .keyword-card {
+          background: #444; 
+          margin-bottom: 10px;
+          padding: 15px;
+          border-radius: 4px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: background-color 0.3s;
+    
+          &:hover {
+            background-color: #555;
+          }
+    
+          .keyword-info {
+            display: flex;
+            flex-direction: column;
+          }
+    
+          .keyword-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+    
+          .keyword-volume {
+            text-align: left;
+            font-size: 0.85rem;
+          }
+    
+          button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #5A5A5A; 
+            color: white;
+            cursor: pointer;
+    
+            &:hover {
+              background-color: #6A6A6A;
+            }
+          }
+        }
+      }
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .enter-keyword-container {
+      flex-direction: column;
+  
+      .left-half, .right-half {
+        flex-basis: auto;
+        width: 100%;
+        padding: 10px;
+      }
+  
+      .related-keywords-full {
+        height: auto; // Adjust height for mobile
+      }
+    }
+  }
+
+  

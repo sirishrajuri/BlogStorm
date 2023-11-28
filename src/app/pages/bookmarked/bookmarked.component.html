@@ -1,0 +1,16 @@
+   
+    <div class="container"> 
+        <app-sidebar class="sidebar"></app-sidebar>
+        <div *ngIf="loading" class="loading">Loading...</div>
+        <div *ngIf="errorMessage" class="errorMessage">{{errorMessage}}</div>
+        <div class="wrapper" *ngIf="!loading && !errorMessage">
+            <h1 class="title">Blog Analytics</h1>
+            <img  src="/assets/ana1.png" >
+            <div class="recommend__wrapper">
+                <div class="empty" *ngIf="regularFIlms.length==0" >
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    

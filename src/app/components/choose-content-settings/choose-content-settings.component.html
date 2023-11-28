@@ -1,0 +1,50 @@
+  <div class="content-settings">
+    <div class="settings-header">
+      <h2>Content Settings</h2>
+    </div>
+
+    <div class="settings-options">
+      <div class="settings-dropdown">
+        <label for="ContentType">Choose Content Type</label>
+        <select id="ContentType" [(ngModel)]="settings.contentType">
+          <option *ngFor="let option of contentTypeOptions" [ngValue]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="settings-option">
+        <input type="checkbox" id="inboundLink" [(ngModel)]="settings.inboundLink">
+        <label for="inboundLink">Inbound Link</label>
+        <span class="description">Add 5 inbound links per blog to your own website.</span>
+      </div>
+      
+      <div class="settings-option">
+        <input type="checkbox" id="outboundLink" [(ngModel)]="settings.outboundLink">
+        <label for="outboundLink">Outbound Link</label>
+        <span class="description">Add 5 outbound links per blog to high authority websites.</span>
+      </div>
+  
+      <div class="settings-option">
+        <input type="checkbox" id="image" [(ngModel)]="settings.image">
+        <label for="image">Image</label>
+        <span class="description">Add one AI-generated image per blog as featured image, based on the content of the blog.</span>
+      </div>
+      
+      <div class="settings-dropdown">
+        <label for="generationModel">Generation Model</label>
+        <select id="generationModel" [(ngModel)]="settings.generationModel">
+          <option *ngFor="let option of generationModelOptions" [ngValue]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="settings-dropdown">
+        <label for="wordpressSite">Word Press Site</label>
+        <select id="wordpressSite" [(ngModel)]="settings.wordpressSite">
+          <option *ngFor="let option of wordpressSiteOptions" [ngValue]="option">{{ option }}</option>
+        </select>
+      </div>
+      <button (click)="back()">Back</button>
+      <button (click)="generateBlogs()" [disabled]="loading" >Generate Blogs</button>
+      <div class="loading-indicator" *ngIf="loading"></div>
+    </div>
+  </div>
+  

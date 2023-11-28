@@ -1,0 +1,59 @@
+.wrapper {
+    width: 280px;
+    height: 250px ;
+    position: relative;
+    .main__img {
+        width: 280px;
+        height: 174px;
+        border-radius: 8px;
+        
+        
+    }
+    .bookmark__icon {
+        position: absolute;
+        z-index: 21414324;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background: #10141E;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+    .info {    
+        .film__wrapper {
+            margin-top: 16px;
+            
+            .film__info {
+                display: flex;
+                gap: 10px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 19px;
+                color: #FFFFFF;
+                mix-blend-mode: normal;
+                opacity: 0.75;
+                .category__wrapper {
+                    display: flex;
+                    gap: 5px;
+                }
+               
+            }
+            .name {
+                gap: 10px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: #FFFFFF;
+            }
+        }
+    }
+    
+}

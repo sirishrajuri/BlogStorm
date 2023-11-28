@@ -1,0 +1,72 @@
+<!-- <div class="container">
+    <app-sidebar class="sidebar"></app-sidebar>
+    <div class="wrapper">
+      <div class="progress-bar-container">
+        <div class="progress-steps">
+          <div class="step" [class.active]="currentStep >= 1">
+            <span class="label">Enter Keyword</span>
+            <span class="dot"></span>
+          </div>
+          <div class="step" [class.active]="currentStep >= 2">
+            <span class="label">Choose Questions</span>
+            <span class="dot"></span>
+          </div>
+          <div class="step" [class.active]="currentStep >= 3">
+            <span class="label">Set Article Settings</span>
+            <span class="dot"></span>
+          </div>
+          <div class="step" [class.active]="currentStep >= 4">
+            <span class="label">Set Content Settings</span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <app-enter-keyword *ngIf="currentStep === 1"></app-enter-keyword>
+        <app-choose-questions *ngIf="currentStep === 2"></app-choose-questions>
+        <app-choose-article-settings *ngIf="currentStep === 3"></app-choose-article-settings>
+        <app-choose-content-settings *ngIf="currentStep === 4"></app-choose-content-settings>
+        <div class="progress-actions">
+          <button class="back-btn" (click)="regressStep()" [disabled]="isAtStart">Back</button>
+          <button class="continue-btn" (click)="advanceStep()" [disabled]="isAtEnd">Continue</button>
+        </div>
+      </div>      
+    </div>
+</div>
+
+ -->
+
+<div class="container">
+    <app-sidebar class="sidebar"></app-sidebar>
+    <div class="wrapper">
+      <div class="progress-bar-container">
+        <div class="progress-steps">
+          <div class="step" [class.active]="currentStep >= 1">
+            <span class="dot"></span>
+            <span class="label">Enter Keyword</span>
+          </div>
+          <div class="step" [class.active]="currentStep >= 2">
+            <span class="dot"></span>
+            <span class="label">Choose Questions</span>
+          </div>
+          <div class="step" [class.active]="currentStep >= 3">
+            <span class="dot"></span>
+            <span class="label">Set Article Settings</span>
+          </div>
+          <div class="step" [class.active]="currentStep >= 4">
+            <span class="dot"></span>
+            <span class="label">Set Content Settings</span>
+          </div>
+        </div>
+        <app-enter-keyword *ngIf="currentStep === 1"></app-enter-keyword>
+        <app-choose-questions *ngIf="currentStep === 2"></app-choose-questions>
+        <app-choose-article-settings *ngIf="currentStep === 3"></app-choose-article-settings>
+        <app-choose-content-settings *ngIf="currentStep === 4"></app-choose-content-settings>
+        
+        <div class="progress-actions">
+          <button class="back-btn" (click)="regressStep()" *ngIf="currentStep !== 4 && currentStep !== 2" [disabled]="isAtStart">Back</button>
+          <button class="continue-btn" (click)="advanceStep()" *ngIf="currentStep !== 4 && currentStep !== 2" >Continue</button>
+        </div>
+      </div>      
+    </div>
+</div>
+
+  

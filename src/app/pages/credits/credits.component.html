@@ -1,0 +1,30 @@
+<div class="container">
+    <app-sidebar class="sidebar"></app-sidebar>
+    <div class="wrapper">
+        <div class="credits-info">
+            <div class="credits-circle">
+                <span class="credits-amount">50</span>
+                <span class="credits-label">Credits</span>
+            </div>
+        </div>
+        <div class="payment-form">
+            <h2>Add Credits</h2>
+            <form>
+                <label for="credit-amount">Amount:</label>
+                <select id="credit-amount">
+                    <option value="10">10 Credits - $5</option>
+                    <option value="20">20 Credits - $9</option>
+                    <option value="50">50 Credits - $20</option>
+                    <option value="100">100 Credits - $35</option>
+                </select>
+
+                <label for="card-info">Card Information:</label>
+                <input type="text" id="card-info" placeholder="Card Number">
+                <input type="text" placeholder="MM/YY">
+                <input type="text" placeholder="CVC">
+
+                <button type="submit" class="btn-purchase">Purchase</button>
+            </form>
+        </div>
+    </div>
+</div>

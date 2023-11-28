@@ -1,0 +1,25 @@
+<div class="wrapper" *ngIf="trendingFilm.isTrending">
+    <img class="main__img" [src]="'/assets/'+trendingFilm.thumbnail.trending?.small" alt="small">
+    <div class="info">
+       <div  class="bookmark__icon" (click)="updateFilmsList(index)">
+        <img *ngIf="!trendingFilm.isBookmarked" src="/assets/icon-bookmark-empty.svg" alt="bookmark">
+        <img *ngIf="trendingFilm.isBookmarked" src="/assets/icon-bookmark-full.svg" alt="bookmark">
+       </div>
+        <div class="film__wrapper">
+            <div class="film__info">
+                <div class="year">{{trendingFilm.year}}</div>
+                <div class="category__wrapper">
+                    
+                    <div class="category">
+                        {{trendingFilm.category}}
+                    </div>
+                
+                </div>
+                <div class="pg"> {{trendingFilm.rating}}</div>
+            </div>
+            <div class="name">
+                {{trendingFilm.title}}
+            </div>
+        </div>
+    </div>
+</div>

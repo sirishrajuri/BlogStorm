@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="wrapper"> 
+        <div class="img">
+            <img src="/assets/logo.svg" alt="logo">
+        </div>
+        <div class="content">
+            <h1 class="title">Sign Up</h1>
+            <p class="error__message">{{authError}}</p>
+            <form [formGroup] = "loginForm" (ngSubmit)="submitLogin()">
+                <div class="input__wrapper">
+                    <input [ngClass]="submitted &&  this.loginForm.get('email')?.invalid? 'input__error' : 'input'" formControlName="email" type="email"  placeholder="Email address">
+                    <div class="error__wrapper" *ngIf="submitted &&  this.loginForm.get('email')?.invalid">
+                        <div class="error" *ngIf="this.loginForm.get('email')?.errors?.['required']"> <small>Email is required.</small>  </div>
+                        <div class="error" *ngIf="this.loginForm.get('email')?.errors?.['email']"> <small>Invalid email format.</small> </div>
+                    </div>
+                
+                </div>
+                <div class="input__wrapper">
+                    <input [ngClass]="submitted &&  this.loginForm.get('password')?.invalid? 'input__error' : 'input'" formControlName="password" type="password"  placeholder="Password">
+                    <div class="error__wrapper" *ngIf="submitted &&  this.loginForm.get('password')?.invalid">
+                        <div class="error" *ngIf="this.loginForm.get('password')?.errors?.['required']"> <small>Password is required.</small>  </div>
+                        <div class="error" *ngIf="this.loginForm.get('password')?.errors?.['minlength']"> <small>Must be at least 6 symb.</small>  </div>
+                    </div>
+                </div>
+                <div class="input__wrapper">
+                    <input [ngClass]="confirmPassword || submitted &&  this.loginForm.get('confirmPassword')?.invalid? 'input__error' : 'input'" formControlName="confirmPassword" type="password"  placeholder="Confirm password">
+                    <div class="error__wrapper" *ngIf="confirmPassword ||  submitted &&  this.loginForm.get('confirmPassword')?.invalid">
+                        <div class="error" *ngIf="this.loginForm.get('confirmPassword')?.errors?.['required']"> <small>Password is required.</small>  </div>
+                        <div class="error" *ngIf="confirmPassword"> <small>Password mismatch</small>  </div>
+                        <div class="error" *ngIf="this.loginForm.get('confirmPassword')?.errors?.['minlength']"> <small>Must be at least 6 symb.</small>  </div>
+                    </div>
+                    
+                </div>
+                <button>Create an account</button>
+            </form>
+            <p >Already have an account?  <span routerLink="/login" >Login</span> </p>
+        </div>
+    </div>
+</div>

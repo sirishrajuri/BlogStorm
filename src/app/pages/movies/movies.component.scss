@@ -1,0 +1,156 @@
+
+.container {
+   
+    .sidebar {
+        position: fixed;
+        z-index: 1;
+       
+    }
+    .loading {
+        width: 100%;
+        text-align: center;
+        padding-top: 130px ;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+        color: var(--white);
+    }
+    .errorMessage {
+        width: 100%;
+        text-align: center;
+        padding-top: 130px ;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+        color: var(--red);
+    }
+    .wrapper  {
+        margin-left: 120px;
+        padding: 32px;
+        .title {
+            padding-top: 32px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.5px;
+            color: var(--white);
+            margin-bottom: 2px;
+        }
+        .title_small {
+            padding-top: 0px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 40px;
+            letter-spacing: -0.5px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .recommend__wrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            align-items: center;
+            justify-content: center;
+            grid-gap: 50px;
+        }
+
+        .mode-card {
+            background: #e5e7eb; /* Slightly lighter shade for the card */
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+
+            &:hover {
+                transform: translateY(-10px);
+                background: #1A2733; /* Lighten background on hover */
+            }
+
+            .mode-icon {
+                font-size: 2em; /* Adjust size according to your icons */
+                margin-bottom: 15px;
+            }
+
+            .mode-name {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .mode-description {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            .mode-action {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 1em;
+                border: none;
+                border-radius: 4px;
+                background-color: #E76F51; /* A vibrant color for the button */
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: #F4A261; /* Lighten button background on hover */
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    
+}
+
+@media(max-width:800px) {
+    
+    .container {
+        
+        .sidebar {
+            position: inherit;
+            z-index: 1;
+        
+        }
+        
+        .wrapper  {
+            margin-left: 0;
+           
+        }
+    }
+
+}
+
+
+@media(max-width:599px) {
+    
+    .container {
+        
+       
+        .wrapper  {
+            margin-left: 0;
+            .title {
+               
+                font-size: 24px;
+                
+            }
+            .recommend__wrapper {
+                width: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+    }
+
+}

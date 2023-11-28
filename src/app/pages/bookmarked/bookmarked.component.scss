@@ -1,0 +1,115 @@
+
+.container {
+   
+    .sidebar {
+        position: fixed;
+        z-index: 1;
+       
+    }
+    .loading {
+        width: 100%;
+        text-align: center;
+        padding-top: 130px ;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+        color: var(--white);
+    }
+    .errorMessage {
+        width: 100%;
+        text-align: center;
+        padding-top: 130px ;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+        color: var(--red);
+    }
+    .wrapper  {
+        margin-left: 120px;
+        .title {
+            padding-top: 32px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.5px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .recommend__wrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            align-items: center;
+            justify-content: center;
+            grid-gap: 20px;
+           .empty {
+            padding-top: 32px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.5px;
+            color: var(--white);
+            margin-bottom: 20px;
+           }
+            
+    
+        }
+    }
+    
+}
+
+@media(max-width:800px) {
+    
+    .container {
+        
+        .sidebar {
+            position: inherit;
+            z-index: 1;
+        
+        }
+        
+        .wrapper  {
+            margin-left: 0;
+           
+        }
+    }
+
+}
+
+
+@media(max-width:599px) {
+    
+    .container {
+        
+       
+        .wrapper  {
+            margin-left: 0;
+            .title {
+               
+                font-size: 24px;
+                
+            }
+            .recommend__wrapper {
+                width: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+                gap: 20px;
+                .empty {
+                    font-size: 24px;
+                   }
+                
+        
+            }
+        }
+        
+    }
+
+}

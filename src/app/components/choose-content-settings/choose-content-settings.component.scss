@@ -1,0 +1,120 @@
+.content-settings {
+  width:50%;
+  background-color: #333; 
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+
+  .settings-header {
+    margin-bottom: 20px;
+
+    h2 {
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .settings-options {
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        background-color: purple;
+        margin:0.5cm;
+        color: white;
+        cursor: pointer;
+
+
+        &:first-child {
+          background-color: #ff6b81;
+
+          &:hover {
+            background-color: darken(#ff6b81, 15%);
+          }
+        }
+    }
+    .settings-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+        accent-color: #58a6ff;
+      }
+
+      label {
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      .description {
+        flex-grow: 1;
+        text-align: left;
+      }
+    }
+
+    .settings-dropdown {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      label {
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      select {
+        flex-grow: 1;
+        padding: 8px;
+        background-color: #333;
+        border: 1px solid #444;
+        border-radius: 4px;
+        color: white;
+      }
+    }
+
+    .loading-indicator {
+      border: 5px solid #f3f3f3; 
+      border-top: 5px solid #3498db; 
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+      margin: 20px auto; 
+    }
+    
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    }
+
+  .settings-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #58a6ff;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#58a6ff, 15%);
+      }
+
+      &:first-child {
+        background-color: #ff6b81;
+
+        &:hover {
+          background-color: darken(#ff6b81, 15%);
+        }
+      }
+    }
+  }
+}

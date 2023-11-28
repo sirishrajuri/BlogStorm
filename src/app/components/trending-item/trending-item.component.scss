@@ -1,0 +1,87 @@
+.wrapper {
+   
+    position: relative;
+    .main__img {
+        width: 470px;
+        height: 230px;
+        border-radius: 8px;
+        
+    }
+    .info {
+        width: 100%;
+        top: 0;
+        position: absolute;
+        display: flex;
+        padding: 16px;
+        height: 100%;
+        .bookmark__icon {
+           position: absolute;
+           top: 16px;
+           right: 16px;
+           cursor: pointer;
+           width: 32px;
+           height: 32px;
+           background: #10141E;
+           mix-blend-mode: normal;
+           opacity: 0.5;
+           border-radius: 50%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+        .film__wrapper {
+            align-self: flex-end;
+            .film__info {
+                display: flex;
+                gap: 10px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 19px;
+                color: #FFFFFF;
+                mix-blend-mode: normal;
+                opacity: 0.75;
+                .category__wrapper {
+                    display: flex;
+                    gap: 5px;
+                }
+               
+            }
+            .name {
+                gap: 10px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+@media(max-width:500px) {
+    .wrapper {
+   
+        position: relative;
+        .main__img {
+            width: 320px;
+            height: 200px;
+            border-radius: 8px;
+            
+        }
+        
+    }
+}
+
+@media(max-width:360px) {
+    .wrapper {
+   
+        position: relative;
+        .main__img {
+            width: 280px;
+            height: 180px;
+            border-radius: 8px;
+            
+        }
+        
+    }
+}

@@ -1,0 +1,32 @@
+<div class="container">
+    <app-sidebar class="sidebar"></app-sidebar>
+    <div class="wrapper">
+        <div class="settings">
+            <div class="settings-header">
+                <h2>{{ user.name }}</h2>
+                <p>{{ user.email }}</p>
+            </div>
+            <form class="settings-form">
+                <div class="settings-section">
+                    <h3>Account</h3>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" [(ngModel)]="user.email">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Your Username" [(ngModel)]="user.username">
+                    <label for="bio">BIO (Optional)</label>
+                    <textarea id="bio" name="bio" placeholder="Your Bio" [(ngModel)]="user.bio"></textarea>
+                </div>
+                <div class="settings-section">
+                    <h3>Security</h3>
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" placeholder="Your Current Password">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" placeholder="Your New Password">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm Your New Password">
+                </div>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>

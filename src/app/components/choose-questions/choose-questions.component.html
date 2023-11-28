@@ -1,0 +1,17 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+<div class="choose-questions-container" *ngIf="!loading">
+    <h2>Choose questions to generate articles for "{{ selectedKeyword }}"</h2>
+    <form (ngSubmit)="submitSelectedQuestions()">
+      <div class="questions-list" *ngFor="let question of questions; let i = index">
+        <label class="question-item">
+          <input type="checkbox" [(ngModel)]="question.selected" name="question{{ i }}">
+          {{ question.text }}
+        </label>
+      </div>
+      <button (click)="back()">Back</button>
+      <button (click)="submitSelectedQuestions()" >Continue</button>
+
+    </form>
+  </div>
+  
+  

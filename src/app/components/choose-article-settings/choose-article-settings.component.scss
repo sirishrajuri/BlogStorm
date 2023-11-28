@@ -1,0 +1,88 @@
+.article-settings-container {
+    background-color: #333; 
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        color: #e7e7e7;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #aaaaaa;
+        margin-bottom: 20px;
+    }
+
+    .settings-options {
+        .option-group {
+            position: relative;
+            margin-bottom: 20px;
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .select-container {
+                position: relative;
+
+                select {
+                    width: calc(100% - 20px); /* width minus the icon width */
+                    padding: 10px 10px 10px 10px;
+                    background: #333;
+                    color: white;
+                    border: 1px solid #444;
+                    border-radius: 4px;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+
+                .dropdown-icon {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                    color: #999;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .settings-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .back-button, .save-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            background: #5c5c5c;
+            cursor: pointer;
+            &:hover {
+                background: #777777;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .article-settings-container {
+            width: 100%;
+            .settings-actions {
+                flex-direction: column;
+                .back-button, .save-button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<div class="enter-keyword-container">
+    <div class="left-half">
+      <h2>Enter a topic below</h2>
+      <p>We can suggest topics for additional articles or you can have it write on just your topic.</p>
+      <div class="button-group">
+        <button (click) = "suggestNewTopics()">Suggest additional topics</button>
+        <button>Write on this topic only</button>
+      </div>
+      <input type="text" placeholder="enter topic here" [(ngModel)]="keyword">
+      <button (click)="getKeywords()">Get Keywords</button>
+      <br>
+      <br>
+      
+      <div *ngIf="suggest" class="suggested-topics">
+        The Trending topics are below. Please choose a topic to generate blogs on:
+        <br>
+        <br>
+        <div *ngFor="let topic of suggestedTopics" (click)="selectTopic(topic)">
+          {{ topic }}
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="right-half" *ngIf="showResults">
+        <div class="related-keywords-full">
+          <h2>Related keywords for "{{ keyword }}"</h2>
+          <div class="keywords-list">
+            <div class="keyword-card" *ngFor="let item of relatedKeywords">
+              <div class="keyword-info">
+                <span class="keyword-title">{{ item }}</span>
+                <span class="keyword-volume">Volume: 600</span>
+              </div>
+              <button (click)="selectKeyword(item)">Get Questions</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
