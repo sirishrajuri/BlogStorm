@@ -63,7 +63,7 @@ export class ChooseContentSettingsComponent {
       formData.append('model', "gpt3.5");
       formData.append('query', question.text); 
       formData.append('create_image', "false");
-      
+      console.log(question.text);
       // Return the http post observable
       return this.httpClient.post(`${API_URL}/generate_blog`, formData);
     });

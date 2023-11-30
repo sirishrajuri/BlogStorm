@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IFilms } from 'src/app/models/IFilms';
-import { FilmsService } from 'src/app/services/films.service';
 
 interface Mode {
   icon: string; // This could be a URL or a class name for a font icon set
@@ -48,7 +47,7 @@ export class MoviesComponent implements OnInit {
   ];
 
 
-  constructor(private filmsService:FilmsService, private router: Router, private route: ActivatedRoute) {}
+  constructor( private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.loading= false;
   }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/Interface/Task.interface';
+import { DataService } from 'src/app/services/data.service';
 import { API_URL } from 'src/environment/environment';
 
 @Component({
@@ -16,8 +17,9 @@ export class TvComponent implements OnInit{
   selectedBlogContent: string = '';
 
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private dataService: DataService, private httpClient: HttpClient) {}
   ngOnInit(): void {
+    this.dataService.changeStep(1);
     this.loading= false;
     this.getTasks();
     this.tasks = [
