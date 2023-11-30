@@ -50,17 +50,7 @@ export class MoviesComponent implements OnInit {
 
   constructor(private filmsService:FilmsService, private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
-    this.loading= true
-    this.filmsService.getFilmsList().subscribe(
-      (data)=> {
-      //@ts-ignore
-      this.films =data
-      this.regularFIlms=this.films.filter(item=>item.category=="Movie")
-      this.loading= false
-    }, (error)=> {
-      this.errorMessage='Something went wrong... try later'
-      this.loading= false
-    })
+    this.loading= false;
   }
 
   useMode(mode: Mode): void {
