@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
-import { MoviesComponent } from './pages/movies/movies.component';
-import { TvComponent } from './pages/tv/tv.component';
+import { ModesComponent } from './pages/modes/modes.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
 import { BookmarkedComponent } from './pages/bookmarked/bookmarked.component';
 import { authGuard } from './guard/auth.guard';
 import { ProgressIndicatorComponent } from './pages/progressIndicatorComponent/progress-indicator.component';
@@ -20,9 +20,9 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'', canActivate:[authGuard], component:HomeComponent},
-  {path:'modes',canActivate:[authGuard], component:MoviesComponent},
+  {path:'modes',canActivate:[authGuard], component:ModesComponent},
   {path:'modes/paa',canActivate:[authGuard], component:ProgressIndicatorComponent},
-  {path:'blogs',canActivate:[authGuard], component:TvComponent},
+  {path:'blogs',canActivate:[authGuard], component:BlogsComponent},
   {path:'bookmarked',canActivate:[authGuard], component:BookmarkedComponent},
   { path: 'modes/paa/enter-keyword', component: EnterKeywordComponent },
   { path: 'modes/paa/choose-questions', component: ChooseQuestionsComponent },

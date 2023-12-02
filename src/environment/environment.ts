@@ -12,5 +12,5 @@ export const environment = {
     }
   };
 
-  export const API_URL = 'http://30da-35-230-18-36.ngrok-free.app';
+  export const API_URL = 'http://04a1-34-91-54-148.ngrok-free.app';
   

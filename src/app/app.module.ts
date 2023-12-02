@@ -13,12 +13,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TrendingItemComponent } from './components/trending-item/trending-item.component';
 import { FilmItemComponent } from './components/film-item/film-item.component';
-import { MoviesComponent } from './pages/movies/movies.component';
-import { TvComponent } from './pages/tv/tv.component';
 import { BookmarkedComponent } from './pages/bookmarked/bookmarked.component';
-import { MoviesSvgComponent } from './components/svg/movies-svg/movies-svg.component';
 import { HomeSvgComponent } from './components/svg/home-svg/home-svg.component';
-import { TvSvgComponent } from './components/svg/tv-svg/tv-svg.component';
+import { blogsSvgComponent } from './components/svg/blogs-svg/blogs-svg.component';
 import { BookmarkedSvgComponent } from './components/svg/bookmarked-svg/bookmarked-svg.component';
 import { ProgressIndicatorComponent } from './pages/progressIndicatorComponent/progress-indicator.component';
 import { EnterKeywordComponent } from './components/enter-keyword/enter-keyword.component';
@@ -30,6 +27,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { SettingsSvgComponent } from './components/svg/settings-svg/settings-svg.component';
 import { CreditsComponent } from './pages/credits/credits.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
+import { ModesComponent } from './pages/modes/modes.component';
+import { ModesSvgComponent } from './components/svg/modes-svg/modes-svg.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +40,9 @@ import { SettingsComponent } from './pages/settings/settings.component';
     HomeComponent,
     TrendingItemComponent,
     FilmItemComponent,
-    MoviesComponent,
-    TvComponent,
     BookmarkedComponent,
-    MoviesSvgComponent,
     HomeSvgComponent,
-    TvSvgComponent,
+    blogsSvgComponent,
     BookmarkedSvgComponent,
     ProgressIndicatorComponent,
     EnterKeywordComponent,
@@ -55,7 +52,10 @@ import { SettingsComponent } from './pages/settings/settings.component';
     ProfileComponent,
     SettingsSvgComponent,
     CreditsComponent,
-    SettingsComponent
+    SettingsComponent,
+    BlogsComponent,
+    ModesComponent,
+    ModesSvgComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit,HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { filter, map, mergeMap } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({

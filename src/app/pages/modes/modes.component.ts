@@ -11,11 +11,11 @@ interface Mode {
 }
 
 @Component({
-  selector: 'app-movies',
-  templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
+  selector: 'app-modes',
+  templateUrl: './modes.component.html',
+  styleUrls: ['./modes.component.scss']
 })
-export class MoviesComponent implements OnInit {
+export class ModesComponent implements OnInit {
   films!:IFilms[]
   loading= false
   errorMessage=''

@@ -5,11 +5,11 @@ import { DataService } from 'src/app/services/data.service';
 import { API_URL } from 'src/environment/environment';
 
 @Component({
-  selector: 'app-tv',
-  templateUrl: './tv.component.html',
-  styleUrls: ['./tv.component.scss']
+  selector: 'app-blogs',
+  templateUrl: './blogs.component.html',
+  styleUrls: ['./blogs.component.scss']
 })
-export class TvComponent implements OnInit{
+export class BlogsComponent implements OnInit{
   loading= false
   errorMessage=''
   tasks: Task[] = [];
