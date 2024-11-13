@@ -12,6 +12,8 @@ It is an Angular-based application designed to facilitate seamless blog creation
 
 1. Sign up and login :
 
+<img width="567" alt="image" src="https://github.com/user-attachments/assets/fbdb6323-1cfd-4a07-ac53-2500c444a140">
+
   
 2. Home Page:
 
@@ -28,6 +30,16 @@ It is an Angular-based application designed to facilitate seamless blog creation
   a. **Input Field:** Users can manually enter a topic of their choice into the text box labeled "Enter a topic below".  
   b. **Suggest additional topics:** Generates a list of related or trending topics to inspire content ideas by scraping the web.  
   c. **Keyword Generation:** The "Get Keywords" button retrieves relevant keywords based on the entered or selected topic  
+
+
+  ![image](https://github.com/user-attachments/assets/4acab046-f3ff-41da-bde6-18c02d9e68fa)
+
+5. Generated articles can be viewed in the 'Blog History':
+  
+![image](https://github.com/user-attachments/assets/4b8709e1-823c-4edc-b265-f97aeb97536d)
+
+![image](https://github.com/user-attachments/assets/d8359f26-826d-49fd-bb91-2174bb1c2053)
+
 
 
 
