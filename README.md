@@ -34,7 +34,16 @@ It is an Angular-based application designed to facilitate seamless blog creation
 
   ![image](https://github.com/user-attachments/assets/4acab046-f3ff-41da-bde6-18c02d9e68fa)
 
-5. Generated articles can be viewed in the 'Blog History':
+5. Set Article and Content Settings:
+
+Users configure:  
+  Tone of the article (e.g., formal, casual, conversational).  
+  Whether images are needed.  
+  Number of words or article length.  
+  Other content preferences.  
+Backend interaction: None (settings stored locally ).  
+ 
+6. Generated articles can be viewed in the 'Blog History':
   
 ![image](https://github.com/user-attachments/assets/4b8709e1-823c-4edc-b265-f97aeb97536d)
 
